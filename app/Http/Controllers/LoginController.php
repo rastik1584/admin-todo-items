@@ -6,6 +6,7 @@ use App\Http\Requests\LoginRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\View\View;
 
 class LoginController extends Controller
 {
@@ -13,7 +14,7 @@ class LoginController extends Controller
      * Login page
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Http\RedirectResponse
      */
-    public function index(): \View
+    public function index(): View
     {
         if (Auth::check()) {
             flash('test message', 'danger');

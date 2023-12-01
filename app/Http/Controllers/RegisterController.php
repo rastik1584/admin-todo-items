@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\RegisterStoreRequest;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 
 class RegisterController extends Controller
@@ -13,7 +14,7 @@ class RegisterController extends Controller
      * Register frontend page
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application
      */
-    public function index(): \View
+    public function index(): View
     {
         return view('auth.register');
     }
