@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('head_title', 'Dashboard')
 @section('content')
     <h2 class="my-4 text-4xl font-semibold dark:text-gray-400">
         Dashboard

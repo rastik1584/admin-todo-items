@@ -108,6 +108,12 @@ class TodoItemController extends Controller
         return redirect()->route('todo-items.index');
     }
 
+    /**
+     * Share todo item from other users
+     *
+     * @param ShareTodoItemRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function share(ShareTodoItemRequest $request)
     {
         $data = $request->validated();

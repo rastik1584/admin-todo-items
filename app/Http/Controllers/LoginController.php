@@ -4,12 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function index()
+    /**
+     * Login page
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Http\RedirectResponse
+     */
+    public function index(): \View
     {
         if (Auth::check()) {
             flash('test message', 'danger');
@@ -18,7 +23,12 @@ class LoginController extends Controller
         return view('auth.login');
     }
 
-    public function store(LoginRequest $request)
+    /**
+     * Login
+     * @param LoginRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(LoginRequest $request): RedirectResponse
     {
         $data = $request->validated();
         if (Auth::attempt($data)) {
@@ -32,7 +42,12 @@ class LoginController extends Controller
         ])->onlyInput('email');
     }
 
-    public function logout(Request $request)
+    /**
+     * Logout
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function logout(Request $request): RedirectResponse
     {
         Auth::logout();
 
