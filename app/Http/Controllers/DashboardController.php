@@ -12,6 +12,7 @@ class DashboardController extends Controller
     {
         return view('pages.dashboard.index', [
             'todoItems' => TodoItem::query()->where('user_id', \Auth::id())->count(),
+            'sharedMe' => \DB::table('todo_item_share_relation')->where('user_id', \Auth::id())->count(),
         ]);
     }
 }

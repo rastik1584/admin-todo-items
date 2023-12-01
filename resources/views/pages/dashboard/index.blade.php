@@ -5,5 +5,5 @@
     </h2>
 
     My todo items: {{ $todoItems }} <br>
-    Shared with me:
+    Shared with me: {{ $sharedMe }}
 @stop
