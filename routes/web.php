@@ -18,7 +18,7 @@ use App\Http\Controllers\TodoCategoryController;
 |
 */
 
-
+Route::get('/', fn () => redirect()->route('login.index'));
 
 Route::get('login', [LoginController::class, 'index'])->name('login.index');
 Route::post('login', [LoginController::class, 'store'])->name('login.store');

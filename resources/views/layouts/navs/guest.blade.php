@@ -11,7 +11,7 @@
     <ul class="mt-2 text-gray-600">
         <!-- Links -->
         <li class="mt-8">
-            <a href="{{ route('login.index') }}" class="flex {{ Request::routeIs('login.index') ? 'shadow py-2 bg-white dark:bg-gray-200 rounded-lg -ml-4' : ''}}">
+            <a href="{{ route('login.index') }}" class="flex pl-3 {{ Request::routeIs('login.index') ? 'shadow py-2 bg-white dark:bg-gray-200 rounded-lg -ml-4' : ''}}">
                 <svg class="fill-current h-5 w-5" viewBox="0 0 24 24">
                     <path
                         d="M12 4a4 4 0 014 4 4 4 0 01-4 4 4 4 0 01-4-4 4 4 0
@@ -26,8 +26,8 @@
             </a>
         </li>
 
-        <li class="mt-8 {{ Request::routeIs('register.index') ? 'shadow py-2 bg-white dark:bg-gray-200 rounded-lg -ml-4' : ''}}">
-            <a href="{{ route('register.index') }}" class="flex">
+        <li class="mt-8">
+            <a href="{{ route('register.index') }}" class="flex pl-3 {{ Request::routeIs('register.index') ? 'shadow py-2 bg-white dark:bg-gray-200 rounded-lg -ml-4' : ''}}">
                 <svg
                     class="fill-current h-5 w-5 dark:text-gray-300"
                     viewBox="0 0 24 24">

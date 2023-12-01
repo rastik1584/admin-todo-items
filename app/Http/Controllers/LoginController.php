@@ -24,6 +24,7 @@ class LoginController extends Controller
         if (Auth::attempt($data)) {
             $request->session()->regenerate();
 
+            flash('Successfully logged in', 'success');
             return redirect()->intended('dashboard');
         }
         return back()->withErrors([

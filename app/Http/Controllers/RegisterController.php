@@ -21,7 +21,7 @@ class RegisterController extends Controller
         $data['password'] = bcrypt($data['password']);
         User::create($data);
 
-        flash(__('auth.verify_email'));
+        flash('Registered successfully please sign in','success');
 
         return redirect()->route('login.index');
     }
