@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\UserRegister;
 use App\Http\Requests\RegisterStoreRequest;
 use App\Models\User;
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
+
 
 class RegisterController extends Controller
 {
